@@ -23,7 +23,7 @@ export const SelectJobScreen = observer(function SelectJobScreen() {
   const navigation = useNavigation()
   return (
     <View>
-      <HeaderCommon onNavi={() => navigation.goBack()} title='Select Job location' extra='no' onEdit={() => { }} />
+      <HeaderCommon onNavi={() => navigation.goBack()} title='Select Job location' />
       <View elevation={5} style={styles.main}>
         <FlatList
           data={Array}

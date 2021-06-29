@@ -7,6 +7,7 @@ import { useStores } from "../../models"
 import AntDesign from 'react-native-vector-icons/AntDesign';
 import MaterialIcons from 'react-native-vector-icons/MaterialIcons';
 import { styles } from './styles'
+import { HEIGHT } from "../../utils/scaling"
 
 export const StartShiftScreen = observer(function StartShiftScreen() {
   // Pull in one of our MST stores
@@ -28,7 +29,7 @@ export const StartShiftScreen = observer(function StartShiftScreen() {
   }, [])
   return (
     <View>
-      <HeaderCommon onNavi={() => navigation.navigate('maindashboard')} title='StartShift' extra='no' onEdit={() => { }} />
+      <HeaderCommon onNavi={() => navigation.navigate('maindashboard')} title='StartShift' />
       <View elevation={5} style={styles.main}>
         <ScrollView
           showsVerticalScrollIndicator={false}>

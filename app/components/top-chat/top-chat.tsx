@@ -1,7 +1,7 @@
 import * as React from "react"
 import { StyleProp, TextStyle, View, ViewStyle, ScrollView, Text } from "react-native"
 import { observer } from "mobx-react-lite"
-import { WIDTH } from "../../utils/scale"
+import { WIDTH } from "../../utils/scaling"
 import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
 import MaterialIcons from 'react-native-vector-icons/MaterialIcons'
 

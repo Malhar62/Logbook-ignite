@@ -31,24 +31,24 @@ export type RootParamList = {
 const Stack = createStackNavigator<RootParamList>()
 const AuthStack = () => {
   return (
-    <Stack.Navigator>
+    <Stack.Navigator
+      screenOptions={{
+        headerShown: false,
+      }}>
       <Stack.Screen
         name='Login'
         component={LoginScreen}
-        options={{
-          headerShown: false,
-        }} />
+      />
       <Stack.Screen
         name='Forgot'
         component={ForgotScreen}
-        options={{
-          headerShown: false,
-        }} />
+      />
 
     </Stack.Navigator>
   )
 }
 const RootStack = () => {
+
   return (
     <Stack.Navigator
       screenOptions={{

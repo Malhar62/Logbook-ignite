@@ -4,7 +4,7 @@ import { observer } from "mobx-react-lite"
 import { Text } from "../"
 import AntDesign from 'react-native-vector-icons/AntDesign';
 import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
-import { HEIGHT, WIDTH } from "../../utils/scale";
+import { HEIGHT, WIDTH } from "../../utils/scaling";
 import { useStores } from "../../models";
 
 export interface DrawerContentProps {

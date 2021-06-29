@@ -1,5 +1,5 @@
 import { ImageStyle, ViewStyle, TextStyle, View } from 'react-native';
-import { HEIGHT, WIDTH } from '../../utils/scale';
+import { HEIGHT, WIDTH } from '../../utils/scaling';
 
 
 export const styles = {

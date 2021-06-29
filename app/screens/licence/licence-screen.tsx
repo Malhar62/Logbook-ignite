@@ -25,8 +25,7 @@ export const LicenceScreen = observer(function LicenceScreen() {
       <HeaderCommon
         onNavi={() => navigation.goBack()}
         title='Licences'
-        extra=''
-        onEdit={() => { }} />
+       />
       <View elevation={5} style={styles.main}>
       <FlatList
                     data={licenceStore.licences.toJSON()}

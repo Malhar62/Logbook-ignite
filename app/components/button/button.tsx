@@ -1,6 +1,6 @@
 import * as React from "react"
 import { TouchableOpacity, Text, View, TextStyle, ViewStyle } from "react-native"
-import { WIDTH } from "../../utils/scale"
+import { WIDTH } from "../../utils/scaling"
 
 /**
  * For your text displaying needs.

@@ -4,7 +4,7 @@ import { View, Text, Keyboard, KeyboardAvoidingView, Alert, TextInput, Touchable
 import { Common } from "../../components"
 import { useNavigation } from "@react-navigation/native"
 import { styles } from './styles';
-import { WIDTH } from "../../utils/scale"
+import { WIDTH } from "../../utils/scaling"
 
 
 export const ForgotScreen = observer(function ForgotScreen() {

@@ -3,7 +3,7 @@ import { StyleProp, TextStyle, View, ViewStyle, Text } from "react-native"
 import { observer } from "mobx-react-lite"
 import Ionicons from 'react-native-vector-icons/Ionicons';
 import MaterialIcons from 'react-native-vector-icons/MaterialIcons';
-import { HEIGHT } from "../../utils/scale";
+import { HEIGHT } from "../../utils/scaling";
 
 
 
@@ -13,9 +13,9 @@ export interface HeaderCommonProps {
    */
   style?: StyleProp<ViewStyle>
   title: string
-  extra: string
+  extra?: string
   onNavi
-  onEdit
+  onEdit?
 }
 
 /**

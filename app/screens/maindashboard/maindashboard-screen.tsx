@@ -8,7 +8,7 @@ import AntDesign from 'react-native-vector-icons/AntDesign';
 import Ionicons from 'react-native-vector-icons/Ionicons';
 import { styles } from './styles';
 import { MenuData } from "./MenuData";
-import { WIDTH } from "../../utils/scale";
+import { WIDTH } from "../../utils/scaling";
 import { useStores } from "../../models"
 
 
@@ -43,9 +43,10 @@ export const MaindashboardScreen = observer(function MaindashboardScreen() {
 
   return (
     <View>
-      <Header onRightPress={() => {
-        authStore.logout()
+      <Header onRightPress={async () => {
+        authStore.logout();
         navigation.navigate('authStack')
+        // await saveString('ISLOGIN','false');
       }} onLeftPress={() => navigation.dispatch(DrawerActions.openDrawer())} />
       <View style={styles.main}>
         <View elevation={5} style={styles.main4}>

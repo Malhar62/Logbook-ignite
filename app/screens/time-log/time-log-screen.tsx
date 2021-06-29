@@ -7,7 +7,7 @@ import AntDesign from 'react-native-vector-icons/AntDesign';
 import MaterialIcons from 'react-native-vector-icons/MaterialIcons';
 import { HeaderCommon } from "../../components"
 import { styles } from "./styles"
-import { HEIGHT } from "../../utils/scale"
+import { HEIGHT } from "../../utils/scaling"
 
 export const TimeLogScreen = observer(function TimeLogScreen() {
 
@@ -24,11 +24,10 @@ export const TimeLogScreen = observer(function TimeLogScreen() {
 
   return (
     <View>
-      <HeaderCommon onNavi={() => navigation.navigate('maindashboard')} title='TIme Logs' extra='no' onEdit={() => { }} />
+      <HeaderCommon onNavi={() => navigation.navigate('maindashboard')} title='Time Logs' />
       <View elevation={5} style={styles.main}>
         <View style={styles.addbutton}>
           <TouchableOpacity onPress={() => {
-            logStore.onAddLog()
             navigation.navigate('addlog')
           }}>
             <View style={styles.addbutton1}>

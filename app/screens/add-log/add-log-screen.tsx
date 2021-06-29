@@ -58,8 +58,7 @@ export const AddLogScreen = observer(function AddLogScreen() {
       <HeaderCommon
         onNavi={() => navigation.goBack()}
         title={name == 'Add' ? 'Add Time log' : 'Edit Time Log'}
-        extra=''
-        onEdit={() => { }} />
+/>
       <View elevation={5} style={styles.main}>
         <FlatList
           numColumns={4}

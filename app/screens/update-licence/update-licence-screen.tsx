@@ -1,6 +1,6 @@
-import React,{useState} from "react"
+import React, { useState } from "react"
 import { observer } from "mobx-react-lite"
-import { TouchableOpacity,Text,TextInput,SafeAreaView,View } from "react-native"
+import { TouchableOpacity, Text, TextInput, SafeAreaView, View } from "react-native"
 import { HeaderCommon } from "../../components"
 import { useNavigation, useRoute } from "@react-navigation/native"
 import { useStores } from "../../models"
@@ -8,19 +8,19 @@ import { styles } from "./styles"
 import MaterialIcons from 'react-native-vector-icons/MaterialIcons';
 
 export const UpdateLicenceScreen = observer(function UpdateLicenceScreen() {
-  // Pull in one of our MST stores
-  const { licenceStore } = useStores()
-  const route=useRoute()
-  // Pull in navigation via hook
- const navigation = useNavigation()
- const [input1, setInput1] = useState(route.params.obj.number1)
+    // Pull in one of our MST stores
+    const { licenceStore } = useStores()
+    const route = useRoute()
+    // Pull in navigation via hook
+    const navigation = useNavigation()
+    const [input1, setInput1] = useState(route.params.obj.number1)
     const [input2, setInput2] = useState(route.params.obj.state1)
     const [input3, setInput3] = useState(route.params.obj.Country1)
     const [input4, setInput4] = useState(route.params.obj.exp1)
-  return (
-    <SafeAreaView>
-            <HeaderCommon extra='' onEdit={()=>{}}
-            onNavi={() => navigation.goBack()} title='Update Licence Information'  />
+    return (
+        <SafeAreaView>
+            <HeaderCommon
+                onNavi={() => navigation.goBack()} title='Update Licence Information' />
             <View elevation={5} style={styles.main}>
                 <View style={styles.view}>
                     <Text style={styles.txt}>Licence Number</Text>
@@ -74,5 +74,5 @@ export const UpdateLicenceScreen = observer(function UpdateLicenceScreen() {
                 </View>
             </View>
         </SafeAreaView>
-  )
+    )
 })

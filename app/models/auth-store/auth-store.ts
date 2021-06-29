@@ -8,19 +8,20 @@ export const AuthStoreModel = types
   .props({
     username: types.optional(types.string, ''),
     password: types.optional(types.string, ''),
-    login:types.optional(types.boolean,false)
+    login: types.optional(types.boolean, false)
   })
   .views((self) => ({})) // eslint-disable-line @typescript-eslint/no-unused-vars
   .actions((self) => ({
     setUser(name, pass) {
       self.username = name;
       self.password = pass;
-      self.login=true;
+      self.login = true;
     },
-    logout(){
-      self.login=false;
-      self.username='';
-      self.password='';
+    logout() {
+      self.login = false;
+      self.username = '';
+      self.password = '';
+      console.log('logout')
     }
   })) // eslint-disable-line @typescript-eslint/no-unused-vars
 

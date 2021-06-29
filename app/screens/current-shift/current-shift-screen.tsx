@@ -26,8 +26,8 @@ export const CurrentShiftScreen = observer(function CurrentShiftScreen() {
     { name: 'police-badge-outline', title: 'Licence', text: 'RHGJS65S8' },//
     { name: 'office-building', title: 'Main Company', text: logStore.companies },
     { name: 'location-pin', title: 'Job Site', text: logStore.jobs },//
-    { name: 'date-range', title: 'Date', text: route.params.date ? route.params.date : date + '-' + month + '-' + year },
-    { name: 'access-time', title: 'Time', text: route.params.time ? route.params.time : hours + ':' + min + ':' + sec, },
+    { name: 'date-range', title: 'Date', text: (route.params.date ? route.params.date : date + '-' + month + '-' + year) },
+    { name: 'access-time', title: 'Time', text: (route.params.time ? route.params.time : hours + ':' + min + ':' + sec) },
   ]
   // Pull in navigation via hook
   const navigation = useNavigation();
@@ -59,7 +59,7 @@ export const CurrentShiftScreen = observer(function CurrentShiftScreen() {
         } else {
           navigation.navigate('timelog', { screen: 'addlog' })
         }
-      }} title='CurrentShift' extra='no' onEdit={() => { }} />
+      }} title='CurrentShift' />
       <View elevation={5} style={styles.main}>
 
         <FlatList

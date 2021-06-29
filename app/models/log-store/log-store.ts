@@ -68,6 +68,7 @@ export const LogStoreModel = types
       }
       self.logs.push(datatoadd)
       console.log(self.logs)
+      this.onAddLog()
     },
     deleteLog(data) {
       let array = self.logs;
@@ -123,9 +124,9 @@ export const LogStoreModel = types
       }
       console.log(obj)
       console.log(self.images)
-      let array = [...self.logs]
+      let array = self.logs
       array.splice(data.ind, 1, obj);
-      self.logs = [...array]
+      self.logs = array
     }
   })) // eslint-disable-line @typescript-eslint/no-unused-vars
 

@@ -22,7 +22,7 @@ export const SelectCompanyScreen = observer(function SelectCompanyScreen() {
 
   return (
     <View>
-      <HeaderCommon onNavi={() => navigation.goBack()} title='Select Main Company' extra='no' onEdit={() => { }} />
+      <HeaderCommon onNavi={() => navigation.goBack()} title='Select Main Company'  />
       <View elevation={5} style={styles.main}>
         <FlatList
           data={Array}
