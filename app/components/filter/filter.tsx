@@ -35,17 +35,16 @@ export interface FilterProps {
   startdate
   enddate
   filtering
+  extra
 }
 
 /**
  * Describe your component here
  */
 export const Filter = observer(function Filter(props: FilterProps) {
-  const { handleCancel, handleConfirm, hideDatePicker, filtering
-    , modalVisible, startdate, enddate, isDatePickerVisible, Setup
-  } = props
+  const { handleCancel, handleConfirm, hideDatePicker, filtering, modalVisible, startdate, enddate, isDatePickerVisible, Setup, extra } = props
   // Pull in one of our MST stores
-
+  const [min, setMin] = useState('2020-06-16T06:52:00.715Z')
   return (
     <Modal isVisible={modalVisible}>
       <View style={MODALVIEW}>
@@ -56,6 +55,7 @@ export const Filter = observer(function Filter(props: FilterProps) {
           <DateTimePickerModal
             isVisible={isDatePickerVisible}
             mode="date"
+            // minimumDate={startdate != '' ? extra : min}
             onConfirm={handleConfirm}
             onCancel={hideDatePicker}
           />

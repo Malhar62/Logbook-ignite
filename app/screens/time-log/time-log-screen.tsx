@@ -135,6 +135,7 @@ export const TimeLogScreen = observer(function TimeLogScreen() {
           Setup={(data) => Setup(data)}
           filtering={() => filtering()}
           startdate={startdate}
+          extra={extra}
           enddate={enddate}
           hideDatePicker={() => hideDatePicker()}
         />

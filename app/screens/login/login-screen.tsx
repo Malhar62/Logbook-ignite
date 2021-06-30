@@ -13,6 +13,7 @@ import { loadString, remove, saveString } from "../../utils/storage"
 export const LoginScreen = observer(function LoginScreen() {
   const navigation = useNavigation()
   const { authStore } = useStores()
+  
   React.useEffect(() => {
     Keyboard.addListener("keyboardDidShow", _keyboardDidShow);
     Keyboard.addListener("keyboardDidHide", _keyboardDidHide);

@@ -15,7 +15,13 @@ import { useStores } from "../../models"
 export const MaindashboardScreen = observer(function MaindashboardScreen() {
   const navigation = useNavigation();
   const { authStore } = useStores()
-  
+  React.useEffect(() => {
+    if (authStore.login != true) {
+      navigation.navigate('authStack');
+    } else {
+      console.log('user is logined!')
+    }
+  }, [])
   React.useEffect(() => {
     checking_location()
   })
