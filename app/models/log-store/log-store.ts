@@ -26,6 +26,7 @@ export const LogStoreModel = types
   .model("LogStore")
   .props({
     logs: types.optional(types.array(logData), []),
+    extralogs: types.optional(types.array(logData), []),
     images: types.optional(types.array(image), [{ link: URL }]),
     extraimages: types.optional(types.array(image), [{ link: URL }]),
     categories: types.optional(types.string, 'Select Category'),
@@ -33,6 +34,7 @@ export const LogStoreModel = types
     descriptions: types.optional(types.string, 'Select Description'),
     companies: types.optional(types.string, 'Select Company'),
     jobs: types.optional(types.string, 'Select Job location'),
+    filterlogs: types.optional(types.array(logData), []),
   })
   .views((self) => ({})) // eslint-disable-line @typescript-eslint/no-unused-vars
   .actions((self) => ({
@@ -83,6 +85,7 @@ export const LogStoreModel = types
       self.tasks = '';
       self.categories = '';
       self.images = getSnapshot(self.extraimages);
+
     },
     onaddfromshift() {
       self.descriptions = '';
@@ -127,6 +130,16 @@ export const LogStoreModel = types
       let array = self.logs
       array.splice(data.ind, 1, obj);
       self.logs = array
+    },
+    filterLog(data1, data2) {
+      self.filterlogs = getSnapshot(self.extralogs)
+      let array = getSnapshot(self.logs);
+      for (var i = 0; i < array.length; i++) {
+        if (array[i].startDate == data1 && array[i].endDate == data2) {
+          self.filterlogs.push(array[i])
+        }
+      }
+      console.log(self.filterlogs)
     }
   })) // eslint-disable-line @typescript-eslint/no-unused-vars
 

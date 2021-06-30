@@ -26,8 +26,8 @@ export const CurrentShiftScreen = observer(function CurrentShiftScreen() {
     { name: 'police-badge-outline', title: 'Licence', text: 'RHGJS65S8' },//
     { name: 'office-building', title: 'Main Company', text: logStore.companies },
     { name: 'location-pin', title: 'Job Site', text: logStore.jobs },//
-    { name: 'date-range', title: 'Date', text: (route.params.date ? route.params.date : date + '-' + month + '-' + year) },
-    { name: 'access-time', title: 'Time', text: (route.params.time ? route.params.time : hours + ':' + min + ':' + sec) },
+    { name: 'date-range', title: 'Date', text: route.params ? route.params.date : date + '-' + month + '-' + year },
+    { name: 'access-time', title: 'Time', text: route.params ? route.params.time : hours + ':' + min + ':' + sec, },
   ]
   // Pull in navigation via hook
   const navigation = useNavigation();
@@ -41,9 +41,9 @@ export const CurrentShiftScreen = observer(function CurrentShiftScreen() {
       category: logStore.categories,
       task: logStore.tasks,
       description: logStore.descriptions,
-      startDate: route.params.date ? route.params.date : date + '-' + month + '-' + year,
+      startDate: route.params ? route.params.date : date + '-' + month + '-' + year,
       endDate: date + '-' + month + '-' + year,
-      startTime: route.params.time ? route.params.time : hours + ':' + min + ':' + sec,
+      startTime: route.param ? route.params.time : hours + ':' + min + ':' + sec,
       endTime: hours + ':' + min + ':' + sec,
     }
     console.log('cat' + obj.category + ' task: ' + obj.task)

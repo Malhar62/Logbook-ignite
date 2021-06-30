@@ -1,6 +1,6 @@
-import React, { useState } from "react"
+import React, { useEffect, useState } from "react"
 import { observer } from "mobx-react-lite"
-import { View, Text, PermissionsAndroid, FlatList, } from "react-native"
+import { View, Text, PermissionsAndroid, FlatList, BackHandler, Alert, } from "react-native"
 import { useNavigation } from "@react-navigation/native"
 import { Header, TopChat } from "../../components";
 import { DrawerActions } from '@react-navigation/native';
@@ -15,6 +15,7 @@ import { useStores } from "../../models"
 export const MaindashboardScreen = observer(function MaindashboardScreen() {
   const navigation = useNavigation();
   const { authStore } = useStores()
+  
   React.useEffect(() => {
     checking_location()
   })

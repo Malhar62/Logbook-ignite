@@ -20,6 +20,11 @@ export const styles ={
     addbutton1:
         { flexDirection: 'row', alignSelf: 'center' }as ViewStyle,
     addbuttontxt:
-        { color: 'grey', fontSize: 15, marginLeft: 4, marginTop: 1 }as TextStyle
-
+        { color: 'grey', fontSize: 15, marginLeft: 4, marginTop: 1 }as TextStyle,
+        button: {
+             bottom: 10, width: WIDTH(130), height: 40, justifyContent: 'center', alignSelf: 'center', borderRadius: 10, backgroundColor: '#524ae8'
+        } as ViewStyle,
+        txt2: {
+            color: '#fff', alignSelf: 'center', fontSize: 18
+        } as TextStyle
 }

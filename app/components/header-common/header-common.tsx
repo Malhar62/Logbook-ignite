@@ -3,6 +3,7 @@ import { StyleProp, TextStyle, View, ViewStyle, Text } from "react-native"
 import { observer } from "mobx-react-lite"
 import Ionicons from 'react-native-vector-icons/Ionicons';
 import MaterialIcons from 'react-native-vector-icons/MaterialIcons';
+import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
 import { HEIGHT } from "../../utils/scaling";
 
 
@@ -16,6 +17,7 @@ export interface HeaderCommonProps {
   extra?: string
   onNavi
   onEdit?
+  onFilter?
 }
 
 /**
@@ -46,6 +48,9 @@ export const HeaderCommon = observer(function HeaderCommon(props: HeaderCommonPr
       </View>
       {extra == 'yes' && <View style={{ position: 'absolute', right: 10 }}>
         <MaterialIcons name='edit' size={20} color='#fff' onPress={() => onEdit()} />
+      </View>}
+      {extra == 'no' && <View style={{ position: 'absolute', right: 10 }}>
+        <MaterialCommunityIcons name='filter-variant' size={25} color='#fff' onPress={() => onEdit()} />
       </View>}
     </View>
   )

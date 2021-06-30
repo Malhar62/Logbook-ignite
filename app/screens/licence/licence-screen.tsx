@@ -1,6 +1,6 @@
 import React from "react"
 import { observer } from "mobx-react-lite"
-import {  View, Text, SafeAreaView,FlatList,TouchableOpacity } from "react-native"
+import { View, Text, SafeAreaView, FlatList, TouchableOpacity } from "react-native"
 import { HeaderCommon } from "../../components"
 import { useNavigation } from "@react-navigation/native"
 import { useStores } from "../../models"
@@ -10,24 +10,24 @@ import AntDesign from 'react-native-vector-icons/AntDesign'
 
 
 export const LicenceScreen = observer(function LicenceScreen() {
-  // Pull in one of our MST stores
-  const { licenceStore } = useStores()
+    // Pull in one of our MST stores
+    const { licenceStore } = useStores()
 
-  // Pull in navigation via hook
-  const navigation = useNavigation()
-  const [list, setList] = React.useState(licenceStore.licences.toJSON())
-  React.useEffect(() => {
-      navigation.addListener("focus", () => setList(licenceStore.licences.toJSON()))
-  }, [navigation]);
+    // Pull in navigation via hook
+    const navigation = useNavigation()
+    const [list, setList] = React.useState(licenceStore.licences.toJSON())
+    React.useEffect(() => {
+        navigation.addListener("focus", () => setList(licenceStore.licences.toJSON()))
+    }, [navigation]);
 
-  return (
-    <SafeAreaView>
-      <HeaderCommon
-        onNavi={() => navigation.goBack()}
-        title='Licences'
-       />
-      <View elevation={5} style={styles.main}>
-      <FlatList
+    return (
+        <SafeAreaView>
+            <HeaderCommon
+                onNavi={() => navigation.goBack()}
+                title='Licences'
+            />
+            <View elevation={5} style={styles.main}>
+                <FlatList
                     data={licenceStore.licences.toJSON()}
                     renderItem={({ item, index }) => (
                         <TouchableOpacity onPress={() => {
@@ -48,7 +48,7 @@ export const LicenceScreen = observer(function LicenceScreen() {
                     )}
                     keyExtractor={item => item.exp}
                 />
-      </View>
-    </SafeAreaView>
-  )
+            </View>
+        </SafeAreaView>
+    )
 })
