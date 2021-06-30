@@ -7,7 +7,7 @@ import { useStores } from "../../models"
 import AntDesign from 'react-native-vector-icons/AntDesign';
 import MaterialIcons from 'react-native-vector-icons/MaterialIcons';
 import { styles } from './styles'
-import { HEIGHT } from "../../utils/scaling"
+import { HEIGHT } from "../../theme/scaling"
 
 export const StartShiftScreen = observer(function StartShiftScreen() {
   // Pull in one of our MST stores

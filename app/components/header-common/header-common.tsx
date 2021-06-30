@@ -4,7 +4,7 @@ import { observer } from "mobx-react-lite"
 import Ionicons from 'react-native-vector-icons/Ionicons';
 import MaterialIcons from 'react-native-vector-icons/MaterialIcons';
 import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
-import { HEIGHT } from "../../utils/scaling";
+import { HEIGHT } from "../../theme/scaling";
 
 
 

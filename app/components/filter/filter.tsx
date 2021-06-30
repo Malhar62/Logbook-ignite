@@ -5,7 +5,7 @@ import MaterialIcons from 'react-native-vector-icons/MaterialIcons';
 import Modal from 'react-native-modal';
 import DateTimePickerModal from "react-native-modal-datetime-picker";
 import { styles } from '../../screens/time-log/styles'
-import { HEIGHT, WIDTH } from "../../utils/scaling";
+import { HEIGHT, WIDTH } from "../../theme/scaling";
 
 
 const MODALVIEW: ViewStyle = { flex: 1, justifyContent: 'center', alignItems: 'center' }

@@ -8,7 +8,7 @@ import AntDesign from 'react-native-vector-icons/AntDesign';
 import Ionicons from 'react-native-vector-icons/Ionicons';
 import { styles } from './styles';
 import { MenuData } from "./MenuData";
-import { WIDTH } from "../../utils/scaling";
+import { WIDTH } from "../../theme/scaling";
 import { useStores } from "../../models"
 
 

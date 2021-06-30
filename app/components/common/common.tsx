@@ -4,7 +4,7 @@ import { observer } from "mobx-react-lite"
 import { color, typography } from "../../theme"
 import { Text } from "../"
 import { flatten } from "ramda"
-import { HEIGHT } from "../../utils/scaling"
+import { HEIGHT } from "../../theme/scaling"
 
 const CONTAINER: ViewStyle = {
   justifyContent: "center",

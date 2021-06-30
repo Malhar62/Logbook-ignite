@@ -8,7 +8,7 @@ import { spacing, typography } from "../../theme"
 import { translate } from "../../i18n/"
 import Entypo from 'react-native-vector-icons/Entypo';
 import FontAswesome from 'react-native-vector-icons/FontAwesome';
-import { HEIGHT, WIDTH } from "../../utils/scaling"
+import { HEIGHT, WIDTH } from "../../theme/scaling"
 
 // static styles
 

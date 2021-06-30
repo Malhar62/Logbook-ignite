@@ -7,7 +7,7 @@ import AntDesign from 'react-native-vector-icons/AntDesign';
 import MaterialIcons from 'react-native-vector-icons/MaterialIcons';
 import { Filter, HeaderCommon } from "../../components"
 import { styles } from "./styles"
-import { HEIGHT } from "../../utils/scaling"
+import { HEIGHT } from "../../theme/scaling"
 import { Alert } from "react-native"
 export const TimeLogScreen = observer(function TimeLogScreen() {
   const [isDatePickerVisible, setDatePickerVisibility] = useState(false);
