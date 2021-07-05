@@ -6,14 +6,12 @@
  */
 import React from "react"
 import { createDrawerNavigator } from "@react-navigation/drawer"
-import { MaindashboardScreen, LicenceScreen, TimeLogScreen, StartShiftScreen, CurrentShiftScreen, SelectCompanyScreen, SelectJobScreen, UpdateLicenceScreen } from "../screens"
+import { MaindashboardScreen, LicenceScreen, TimeLogScreen, StartShiftScreen, AboutLogScreen, AddLogScreen, CurrentShiftScreen, SelectCompanyScreen, SelectJobScreen, UpdateLicenceScreen } from "../screens"
 import { WIDTH } from "../theme/scaling"
 import { DrawerContent } from "../components"
 import { useNavigation } from "@react-navigation/native"
 import { createStackNavigator } from "@react-navigation/stack"
 import { Alert } from "react-native"
-import { AboutLogScreen } from "../screens/about-log/about-log-screen"
-import { AddLogScreen } from "../screens/add-log/add-log-screen"
 import { useStores } from "../models"
 /**
  * This type allows TypeScript to know what routes are defined in this navigator

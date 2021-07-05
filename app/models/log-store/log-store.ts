@@ -93,14 +93,17 @@ export const LogStoreModel = types
       self.categories = '';
       self.images = getSnapshot(self.extraimages);
     },
+    
     addImage(data) {
       self.images.push(data)
     },
+
     deleteImage(data) {
       let array = self.images;
       array.splice(data, 1);
       self.images = array;
     },
+
     setForEdit(data) {
       console.log('setting up.............')
       self.tasks = data.task;
@@ -109,6 +112,7 @@ export const LogStoreModel = types
       self.images = getSnapshot(data.image)
       console.log(data.image)
     },
+
     editLog(data) {
       console.log("----" + data.category + ' ' + data.task)
       let obj = {
@@ -125,12 +129,14 @@ export const LogStoreModel = types
         endTime: data.endTime,
         image: getSnapshot(self.images)
       }
+
       console.log(obj)
       console.log(self.images)
       let array = self.logs
       array.splice(data.ind, 1, obj);
       self.logs = array
     },
+
     filterLog(data1, data2) {
       self.filterlogs = getSnapshot(self.extralogs)
       let array = getSnapshot(self.logs);
